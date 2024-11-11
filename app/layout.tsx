@@ -1,7 +1,8 @@
 import "./global.css";
-import { Inter } from "next/font/google";
+import { cn } from "@/lib/utils";
+import { Inter as FontSans } from "next/font/google";
 
-export const fontSans = Inter({ subsets: ["latin"] });
+const fontSans = FontSans({ subsets: ["latin"] });
 
 export default function RootLayout({
   children,
@@ -9,8 +10,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="es">
-      <body className={`${fontSans.className} antialiased`}>
+    <html lang="en">
+      <body className={cn('antialiased', fontSans.className)}>
         {children}
       </body>
     </html>
