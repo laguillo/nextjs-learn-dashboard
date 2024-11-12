@@ -7,9 +7,9 @@ import {
   CurrencyDollarIcon,
   UserCircleIcon,
 } from "@heroicons/react/24/outline";
-import { Button } from "../button";
 import { createInvoice, State } from "@/lib/actions";
 import { useActionState } from "react";
+import { Button } from "@/components/ui/button";
 
 export default function Form({ customers }: { customers: CustomerField[] }) {
   const initialState: State = { message: null, errors: {} };
